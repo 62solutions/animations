@@ -39,6 +39,11 @@ window.onpopstate = router;
 router();
 
 
+
+
+
+
+
 //
 // //скролл эелементов с перекрытием
 // const checkForElements = setInterval(() => {
@@ -85,8 +90,6 @@ router();
 //
 // }
 //
-
-
 
 
 

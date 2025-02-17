@@ -103,7 +103,7 @@ body {
 
 
 .slide_container {
-    height: 200vh; /* Высота контейнера больше высоты экрана */
+    height: 300vh; /* Высота контейнера больше высоты экрана */
     background-color: #f0f0f0;
 }
 
@@ -115,24 +115,35 @@ body {
     color: white;
     padding: 10px;
     text-align: center;
+    font-family: Roboto;
+    font-size: 68px;
+    font-weight: bold;
     z-index: 1;
 }
 
-.sticky-box2 {
-    height: 100vh;
-    position: sticky;
-    top: 0; /* Прилипает к верху экрана */
+.box2{
     background-color: lightgray;
-    color: white;
-    padding: 10px;
-    text-align: center;
     z-index: 5;
+}
+
+.box3{
+    background-color: darkslategrey;
+    z-index: 7;
 }
 
 .other-content {
     margin-top: 20px;
     z-index: 10;
     height: 600px;
+}
+
+#header{
+    height: 100vh;
+    padding-top: 100px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 68px;
+    font-weight: bold;
 }
 
 .footer{
