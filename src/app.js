@@ -26,7 +26,7 @@ async function router() {
 // Обработчик клика по ссылкам
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', async (event) => {
-        event.preventDefault(); // Предотвращаем переход по ссылке
+        event.preventDefault();
         const path = link.getAttribute('href');
 
         history.pushState(null, '', path); // Изменяем URL
@@ -35,55 +35,56 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-// Обработчик события при использовании кнопок "Назад" и "Вперед"
 window.onpopstate = router;
-// Изначальная загрузка содержимого
 router();
 
 
-
-//скролл эелементов с перекрытием
-const checkForElements = setInterval(() => {
-    const elements = document.querySelectorAll('.full_screen');
-    if (elements.length > 0) {
-        intersection()
-        clearInterval(checkForElements); // Останавливаем проверку
-    }
-}, 100);
-
-
-
-
-function intersection() {
-
-    // Все секции, за которыми будем наблюдать
-    const sections = document.querySelectorAll('.card');
-
-    // Настройки IntersectionObserver
-    const options = {
-        root: null, // Используем viewport как корневой элемент
-        rootMargin: '0px', // Без отступов
-        threshold: 0.99 // Сработает, когда 50% элемента будет видно
-    };
-
-    // Callback-функция
-    const callback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add('st')
-            }
-        });
-    };
-
-    // Создаем IntersectionObserver
-    const observer = new IntersectionObserver(callback, options);
-
-    // Начинаем наблюдение за всеми секциями
-    sections.forEach(section => observer.observe(section));
-
-}
-
+//
+// //скролл эелементов с перекрытием
+// const checkForElements = setInterval(() => {
+//     const elements = document.querySelectorAll('.full_screen');
+//     if (elements.length > 0) {
+//         intersection()
+//         clearInterval(checkForElements); // Останавливаем проверку
+//     }
+// }, 100);
+//
+//
+//
+//
+// function intersection() {
+//
+//     // Все секции, за которыми будем наблюдать
+//     const sections = document.querySelectorAll('.card');
+//
+//     // Настройки IntersectionObserver
+//     const options = {
+//         root: null,
+//         rootMargin: '0px',
+//         threshold: 0.99
+//     };
+//
+//     // Callback-функция
+//     const callback = (entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add('sticky')
+//                 if(entry.target.classList.contains('yellow')){
+//
+//                 }
+//             }
+//
+//         });
+//     };
+//
+//     // Создаем IntersectionObserver
+//     const observer = new IntersectionObserver(callback, options);
+//
+//     // Начинаем наблюдение за всеми секциями
+//     sections.forEach(section => observer.observe(section));
+//
+// }
+//
 
 
 
