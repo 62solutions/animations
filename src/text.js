@@ -12,7 +12,7 @@ const checkForElements = setInterval(() => {
             text: "HEADER", // Новый текст
             ease: "elastic.inOut" // Эффект плавности
         });
-        clearInterval(checkForElements); // Останавливаем проверку
+        clearInterval(checkForElements);
     }
 }, 100);
 
