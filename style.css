@@ -139,13 +139,25 @@ body {
 
 #header{
     height: 100vh;
+    padding: 50px;
     padding-top: 100px;
-    text-align: center;
+    text-align: left;
+
+}
+
+#header>h1{
     font-family: Roboto;
     font-size: 68px;
     font-weight: bold;
 }
 
+
 .footer{
     height: 100vh;
+}
+
+#moving{
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
 }
