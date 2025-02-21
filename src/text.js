@@ -15,7 +15,7 @@ const checkForElements = setInterval(() => {
     const elements = document.querySelectorAll('#header');
     if (elements.length > 0) {
        animations()
-        clearInterval(checkForElements); 
+        clearInterval(checkForElements);
     }
 }, 100);
 
